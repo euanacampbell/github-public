@@ -1,8 +1,8 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
-GitHub: [github.com/euanacampbell/github-public](https://github.com/euanacampbell/github-public)
+GitHub: [github.com/euanacampbell/gitprofile](https://github.com/euanacampbell/gitprofile)
 
-PyPi: [pypi.org/project/github-public](https://pypi.org/project/github-public)
+PyPi: [pypi.org/project/gitprofile](https://pypi.org/project/gitprofile)
 
 ## Installation
 
