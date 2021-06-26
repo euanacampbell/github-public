@@ -9,8 +9,8 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     # How you named your package folder (MyLib)
-    name='github-public',
-    packages=['github-public'],   # Chose the same as "name"
+    name='gitprofile',
+    packages=['gitprofile'],   # Chose the same as "name"
     version='0.1',      # Start with a small number and increase it with every change you make
     # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     license='MIT',
@@ -21,9 +21,9 @@ setup(
     author='Euan Campbell',                   # Type in your name
     author_email='dev@euan.app',
     # Provide either the link to your github or to your website
-    url='https://github.com/euanacampbell/github_public',
+    url='https://github.com/euanacampbell/gitprofile',
     # I explain this later on
-    download_url='https://github.com/euanacampbell/github_public/archive/refs/heads/master.tar.gz',
+    download_url='https://github.com/euanacampbell/gitprofile/archive/refs/heads/master.tar.gz',
     # Keywords that define your package best
     keywords=['GitHub', 'scraping', 'requests'],
     install_requires=[
