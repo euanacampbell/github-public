@@ -7,87 +7,62 @@ PyPi: [pypi.org/project/github-public](https://pypi.org/project/octopus-energy-a
 ## Installation
 
 ```bash
-pip install octopus-energy-api
+pip install gitprofile
 ```
 
 ## Import
 
 ```python
-from octopus_energy_api import oe_api
+from gitprofile.github import profile
 ```
 
-## Usage
-Two ways of creating an API instance.
-
-#### Load access details in manually - Can be found using this fantastic tutorial by Guy Lipman [guylipman.medium.com](https://guylipman.medium.com/accessing-your-octopus-smart-meter-data-3f3905ca8fec).
+## Setup
 
 ```python
-from octopus_energy_api import oe_api
+from gitprofile.github import profile
 
-account_number = ""
-api_key = ""
-mpan = ""
-serial_number = ""
-
-energy_api = oe_api(account_number, api_key, mpan=mpan, serial_number=serial_number)
+github_user_name = 'euanacampbell'
+user_profile = profile(github_user_name)
 ```
 
-#### Get mpan and serial numbers from account number + api key. (currently only works for single property accounts)
+## Repositories
 
 ```python
-from octopus_energy_api import oe_api
+from gitprofile.github import profile
 
-api_key = "value"
-account_number = "value"
+github_user_name = 'euanacampbell'
+user_profile = profile(github_user_name)
 
-energy_api = oe_api(account_number, api_key)
+for repo in user_profile:
+    print( repo.title )
+
+github-public
+octopus_energy_api
+boggle_solver
+System-Monitoring
+Pathfinding-Algorithm
+pegasus
+euanacampbell.github.io
+sqlite-editor
+reddit-client
 ```
 
-## Account Details
-```python
-energy_api.account_details()
-```
-
-## Consumption
-
-Getting all consumption data.
-```python
-today = datetime.date.today() # setting end date to today
-start = today.replace(day=1) # setting start date to the beginning of the month
-
-energy_api.consumption(start, today)
-```
-
-Getting calculated consumption data - total, mean, and median.
-```python
-today = datetime.date.today() # setting end date to today
-start = today.replace(day=1) # setting start date to the beginning of the month
-
-energy_api.consumption_total(start, today)
-
-energy_api.consumption_mean(start, today)
-
-energy_api.consumption_median(start, today)
-```
-
-Price of consumption.
-```python
-today = datetime.today()
-start = today - timedelta(days=300)
-
-electric_rate = 2.73
-
-energy_api.consumption_cost(start, today, electric_rate)
-```
-
-## Products
+## Accessible details
 
 ```python
-energy_api.products()
-```
+from gitprofile.github import profile
 
-## Meter Information
+github_user_name = 'euanacampbell'
+user_profile = profile(github_user_name)
 
-```python
-energy_api.meter_point()
+first_repo = user_profile[0]
+
+# title
+first_repo.title
+
+# url
+first_repo.url
+
+# description
+first_repo.description
 ```
