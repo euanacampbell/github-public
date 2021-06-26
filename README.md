@@ -36,15 +36,15 @@ user_profile = profile(github_user_name)
 for repo in user_profile:
     print( repo.title )
 
-github-public
-octopus_energy_api
-boggle_solver
-System-Monitoring
-Pathfinding-Algorithm
-pegasus
-euanacampbell.github.io
-sqlite-editor
-reddit-client
+# github-public
+# octopus_energy_api
+# boggle_solver
+# System-Monitoring
+# Pathfinding-Algorithm
+# pegasus
+# euanacampbell.github.io
+# sqlite-editor
+# reddit-client
 ```
 
 ## Accessible details
@@ -55,14 +55,17 @@ from gitprofile.github import profile
 github_user_name = 'euanacampbell'
 user_profile = profile(github_user_name)
 
-first_repo = user_profile[0]
+first_repo = user_profile.repositories[0]
 
 # title
 first_repo.title
+#gitprofile
 
 # url
 first_repo.url
+#https://github.com/euanacampbell/gitprofile
 
 # description
 first_repo.description
+#Extract public repository data.
 ```
