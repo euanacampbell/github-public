@@ -57,15 +57,12 @@ user_profile = profile(github_user_name)
 
 first_repo = user_profile.repositories[0]
 
-# title
 first_repo.title
 #gitprofile
 
-# url
 first_repo.url
 #https://github.com/euanacampbell/gitprofile
 
-# description
 first_repo.description
 #Extract public repository data.
 ```
